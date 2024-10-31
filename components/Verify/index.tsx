@@ -1,3 +1,4 @@
+"use client";
 import {
   MiniKit,
   VerificationLevel,
@@ -42,20 +43,17 @@ export const VerifyBlock = () => {
     }
 
     // Verify the proof in the backend
-    const verifyResponse = await fetch(
-      `${process.env.NEXTAUTH_URL}/api/verify`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          payload: finalPayload as ISuccessResult, // Parses only the fields we need to verify
-          action: verifyPayload.action,
-          signal: verifyPayload.signal, // Optional
-        }),
-      }
-    );
+    const verifyResponse = await fetch(`/api/verify`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        payload: finalPayload as ISuccessResult, // Parses only the fields we need to verify
+        action: verifyPayload.action,
+        signal: verifyPayload.signal, // Optional
+      }),
+    });
 
     // TODO: Handle Success!
     const verifyResponseJson = await verifyResponse.json();

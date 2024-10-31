@@ -1,3 +1,4 @@
+"use client";
 import {
   MiniKit,
   tokenToDecimals,
@@ -7,12 +8,9 @@ import {
 
 const sendPayment = async () => {
   try {
-    const res = await fetch(
-      `${process.env.NEXTAUTH_URL}/api/initiate-payment`,
-      {
-        method: "POST",
-      }
-    );
+    const res = await fetch(`/api/initiate-payment`, {
+      method: "POST",
+    });
 
     const { id } = await res.json();
 
