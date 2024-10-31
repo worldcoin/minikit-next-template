@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@worldcoin/minikit-js':
-        specifier: 0.0.27-internal-alpha
-        version: 0.0.27-internal-alpha(@types/react@18.3.4)(ethers@6.13.2)(react@18.3.1)(typescript@5.5.4)
+        specifier: 1.1.1
+        version: 1.1.1(@types/react@18.3.4)(react@18.3.1)(typescript@5.5.4)(viem@2.20.0(typescript@5.5.4))
       eruda:
         specifier: ^3.2.3
         version: 3.2.3
@@ -56,9 +56,6 @@ packages:
 
   '@adraffy/ens-normalize@1.10.0':
     resolution: {integrity: sha512-nA9XHtlAkYfJxY7bce8DcN7eKxWWCWkU+1GR9d+U6MbNpfwQp8TI7vqOsBsMcHoT4mBu2kypKoSKnghEzOOq5Q==}
-
-  '@adraffy/ens-normalize@1.10.1':
-    resolution: {integrity: sha512-96Z2IP3mYmF1Xg2cDm8f1gWGf/HUVedQ3FMifV4kG/PQ4yEP51xDtRAEfhVNt5f/uzpNkZHwWQuUcu6D6K+Ekw==}
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -181,15 +178,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@noble/curves@1.2.0':
-    resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
-
   '@noble/curves@1.4.0':
     resolution: {integrity: sha512-p+4cb332SFCrReJkCYe8Xzm0OWi4Jji5jVdIZRL/PmacmDkFNw6MrrV+gGpiPxLHbV+zKFRywUWbaseT+tZRXg==}
-
-  '@noble/hashes@1.3.2':
-    resolution: {integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==}
-    engines: {node: '>= 16'}
 
   '@noble/hashes@1.4.0':
     resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
@@ -234,9 +224,6 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-
-  '@types/node@18.15.13':
-    resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
 
   '@types/node@20.16.1':
     resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
@@ -288,14 +275,25 @@ packages:
     resolution: {integrity: sha512-HAgaZl8rmKq5aKeNAOXIbvhDwtpxTM4Wsy8F26LH1vMBgTe3tx/wHXmV7jsNl1p2k8XRhGmrAdqeRVK5QPhBfg==}
     engines: {node: '>=12.4'}
 
-  '@worldcoin/minikit-js@0.0.27-internal-alpha':
-    resolution: {integrity: sha512-nAmzd3Uzvms9+A85NJdCK7pRrrQ35lQ1oJc5xi2HErKt0NTYI+RfC7Ueny5Wil/6+qGV6no1e2/2grkTRrqYOA==}
-    engines: {node: '>=12.4'}
+  '@worldcoin/minikit-js@1.1.1':
+    resolution: {integrity: sha512-RzUZAim4TfmygQDzdo+RJ6O4xJ807aFVNif9w60Y/Rgj8GFI9V/wrTby5Okrt9B7obZ5CR86HKcMjlhJAwIxHw==}
+    engines: {node: '>= 16'}
     peerDependencies:
-      ethers: ^6.0.8
+      viem: ^2.0.0
 
   abitype@1.0.5:
     resolution: {integrity: sha512-YzDhti7cjlfaBhHutMaboYB21Ha3rXR9QTkNJFzYC4kC8YclaiwPBBBJY8ejFdu2wnJeZCVZSMlQJ7fi8S6hsw==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+      zod: ^3 >=3.22.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      zod:
+        optional: true
+
+  abitype@1.0.6:
+    resolution: {integrity: sha512-MMSqYh4+C/aVqI2RQaWqbvI4Kxo5cQV40WQ4QFtDnNzCkqChm8MuENhElmynZlO0qUy/ObkEUaXtKqYnx1Kp3A==}
     peerDependencies:
       typescript: '>=5.0.4'
       zod: ^3 >=3.22.0
@@ -314,9 +312,6 @@ packages:
     resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  aes-js@4.0.0-beta.5:
-    resolution: {integrity: sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -708,10 +703,6 @@ packages:
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
-
-  ethers@6.13.2:
-    resolution: {integrity: sha512-9VkriTTed+/27BGuY1s0hf441kqwHJ1wtN2edksEtiRvXx+soxRX3iSXTfFqq2+YwrOqbDoTHjIhQnjJRlzKmg==}
-    engines: {node: '>=14.0.0'}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -1573,9 +1564,6 @@ packages:
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
-  tslib@2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
@@ -1718,8 +1706,6 @@ snapshots:
 
   '@adraffy/ens-normalize@1.10.0': {}
 
-  '@adraffy/ens-normalize@1.10.1': {}
-
   '@alloc/quick-lru@5.2.0': {}
 
   '@babel/runtime@7.25.4':
@@ -1820,15 +1806,9 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.6':
     optional: true
 
-  '@noble/curves@1.2.0':
-    dependencies:
-      '@noble/hashes': 1.3.2
-
   '@noble/curves@1.4.0':
     dependencies:
       '@noble/hashes': 1.4.0
-
-  '@noble/hashes@1.3.2': {}
 
   '@noble/hashes@1.4.0': {}
 
@@ -1872,8 +1852,6 @@ snapshots:
       tslib: 2.6.3
 
   '@types/json5@0.0.29': {}
-
-  '@types/node@18.15.13': {}
 
   '@types/node@20.16.1':
     dependencies:
@@ -1947,10 +1925,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@worldcoin/minikit-js@0.0.27-internal-alpha(@types/react@18.3.4)(ethers@6.13.2)(react@18.3.1)(typescript@5.5.4)':
+  '@worldcoin/minikit-js@1.1.1(@types/react@18.3.4)(react@18.3.1)(typescript@5.5.4)(viem@2.20.0(typescript@5.5.4))':
     dependencies:
       '@worldcoin/idkit-core': 1.3.0(@types/react@18.3.4)(react@18.3.1)(typescript@5.5.4)
-      ethers: 6.13.2
+      abitype: 1.0.6(typescript@5.5.4)
+      viem: 2.20.0(typescript@5.5.4)
     transitivePeerDependencies:
       - '@types/react'
       - bufferutil
@@ -1964,13 +1943,15 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
+  abitype@1.0.6(typescript@5.5.4):
+    optionalDependencies:
+      typescript: 5.5.4
+
   acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
       acorn: 8.12.1
 
   acorn@8.12.1: {}
-
-  aes-js@4.0.0-beta.5: {}
 
   ajv@6.12.6:
     dependencies:
@@ -2374,7 +2355,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.35.0(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -2398,7 +2379,7 @@ snapshots:
       enhanced-resolve: 5.17.1
       eslint: 8.57.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
       is-core-module: 2.15.1
@@ -2420,7 +2401,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -2560,19 +2541,6 @@ snapshots:
   estraverse@5.3.0: {}
 
   esutils@2.0.3: {}
-
-  ethers@6.13.2:
-    dependencies:
-      '@adraffy/ens-normalize': 1.10.1
-      '@noble/curves': 1.2.0
-      '@noble/hashes': 1.3.2
-      '@types/node': 18.15.13
-      aes-js: 4.0.0-beta.5
-      tslib: 2.4.0
-      ws: 8.17.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   fast-deep-equal@3.1.3: {}
 
@@ -3479,8 +3447,6 @@ snapshots:
       json5: 1.0.2
       minimist: 1.2.8
       strip-bom: 3.0.0
-
-  tslib@2.4.0: {}
 
   tslib@2.6.3: {}
 
