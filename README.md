@@ -13,6 +13,6 @@ To run as a mini app choose a production app in the dev portal and use NGROK to 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-View docs: [Docs](https://minikit-docs.vercel.app/mini-apps)
+View docs: [Docs](https://docs.world.org/)
 
 [Developer Portal](https://developer.worldcoin.org/)
